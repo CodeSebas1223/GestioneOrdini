@@ -1,0 +1,33 @@
+<table>
+<tr>
+<th>Articolo</th>
+<th>Quantità</th>
+<th>Prezzo</th>
+</tr>
+
+<tr th:each="r : ${righe}">
+<td th:text="${r.articolo.nome}"></td>
+<td th:text="${r.quantita}"></td>
+<td th:text="${r.prezzo}"></td>
+</tr>
+
+<tr>
+<td colspan="2">Totale</td>
+<td th:text="${totale}"></td>
+</tr>
+
+<tr th:each="ordine : ${ordini}">
+<td>
+<a th:href="@{/ordini/{id}(id=${ordine.id})}"
+   th:text="${ordine.id}">
+</a>
+</td>
+
+<td th:text="${ordine.nomeCliente}"></td>
+
+<td th:text="${ordine.data}"></td>
+</tr>
+
+</table>
+
+

@@ -1,0 +1,23 @@
+<html>
+<a th:href="@{/ordini/nuovo}" >Nuovo Ordine</a>
+<a th:href="@{/logout}">Logout</a>
+
+<head>
+  <link rel = "stylesheet" type = "text/css" th:href = "@{/css/lista-ordini.css}">
+</head>
+
+<table>
+<tr>
+  <th>ID</th>
+  <th>Cliente</th>
+  <th>Data</th>
+</tr>
+
+<tr th:each="ordine : ${ordini}">
+ <td th:te m xt="${ordine.id}"></td>
+ <td th:text="${ordine.nomeCliente}"></td>
+ <td th:text="${ordine.data}"></td>
+</tr>
+</table>
+
+</html>
