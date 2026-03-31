@@ -1,0 +1,33 @@
+.box {
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+button {
+	background-color: gray;
+	color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+	
+}
+
+.btn{
+	background-color: gray;
+	color: white;
+	border-radius: 10px;
+	
+	
+}

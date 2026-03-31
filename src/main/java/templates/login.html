@@ -1,0 +1,44 @@
+<html>
+<head>
+ <link rel = "stylesheet" type = "text/css" th:href = "@{/css/style.css}">
+</head>
+
+<body>
+
+<header>
+   <h1>Login</h1>
+</header>
+
+<footer>
+   <hr>
+</footer>
+
+<div class = "box">
+
+<form th:action="@{/login}" method="post">
+
+<label>username:</label>
+
+<input type = "text" name = "username" placeholder = "Inserisci l'username" required>
+
+<br>
+
+<label>password:</label>
+
+<input type = "password" name = "password" minlength = "4" placeholder = "Inserisci il password"required>
+
+<br>
+
+<input style=" background-color: gray; color: white; border-radius: 10px;" type = "reset">
+
+<br>
+
+<button type = "submit" class = "btn">Login</button>
+
+</div>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+ <link rel = "stylesheet" type = "text/css" th:href = "@{/css/nuovo-ordine.css}">
+</head>
+
+<form th:action="@{/ordini/nuovo}" method="post">
+
+<div class="box">
+
+<input type = "text" name = "nomeCliente" placeholder = "Nome Cliente">
+
+<input type = "date" name = "data">
+
+
+<select name = "articoloId">
+<option th:each = "articolo : ${articoli}"
+        th:value = "${articolo.id}"
+        th:text = "${articolo.nome}">
+</option>
+</select>
+
+<input type = "number" name = "quantita">
+
+<button type = "submit"> Crea Ordine </button>
+
+</div>
+
+</form>
+</html>

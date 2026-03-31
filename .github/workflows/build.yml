@@ -15,8 +15,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build
-        run: mvn -B package --file pom.xml
+      
 
       - name: Build Docker image
         run: docker build -t my-webapp:latest .
