@@ -1,0 +1,37 @@
+name: Build CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+		
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+
+      - name: Give executable permission to mvnw
+        run: chmod +x mvnw
+
+		
+      - name: Build JAR with Maven
+        run: ./mvnw -B package
+
+    
+      - name: Check target directory
+        run: ls -l target
+
+
+      - name: Build Docker image
+        run: docker build -t gpv2-app:latest .
